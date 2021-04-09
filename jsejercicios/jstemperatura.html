@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function tac() {
+document.getElementById("datoc").value = toCelsius(document.getElementById("datof").value);
+}
+
+function taf() {
+document.getElementById("datof").value = toFahrenheit(document.getElementById("datoc").value);
+}
+
+function toCelsius(fahrenheit) {
+return (5/9) * (fahrenheit-32);
+}
+
+function toFahrenheit(celsius) {
+return (9/5 * celsius) + 32;
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<label for="datof">Fahrenheit:</label>
+<input type="text" id="datof" onchange="tac()">
+<br>
+<br>
+<label for="datoc">Celsius:</label>
+<input type="text" id="datoc" onchange="taf()">
+
+</body>
+</html>
+
+
