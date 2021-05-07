@@ -1,0 +1,235 @@
+<!--En este ejercicio usaremos el archivo “json_demo” y el editor de w3schools. Responde a los siguientes apartados-->
+
+<!--Muestra edad-->
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.age;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra del primer elemento pets, el tipo de animal-->
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.pets[0].animal;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra del primer elemento pets, el nombre-->
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.pets[0].name;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra el número de mascotas (pets)-->
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.pets.length;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra el nombre de todas las mascotas-->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                var tabla = "";
+                n = myObj.pets.length;
+                for (i = 0; i < n; i++) {
+                    tabla += myObj.pets[i].name + "<br>";
+                }
+
+                document.getElementById("demo").innerHTML = tabla;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra todos los datos en un párrafo-->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                var tabla = myObj.name + ", edad: " + myObj.age + "<br>";
+                n = myObj.pets.length;
+                for (i = 0; i < n; i++) {
+                    tabla += myObj.pets[i].animal + ", nombre: " + myObj.pets[i].name + "<br>";
+                }
+                document.getElementById("demo").innerHTML = tabla;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>
+
+
+<!--Muestra todos los datos en una tabla-->
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                var tabla = "<table><tr><td>" + myObj.name + ", edad: " + myObj.age + "</tr></td>";
+                n = myObj.pets.length;
+                for (i = 0; i < n; i++) {
+                    tabla += "<tr><td>" + myObj.pets[i].name + ", especie: " + myObj.pets[i].animal + "</tr></td>";
+                }
+                tabla += "</table>";
+                document.getElementById("demo").innerHTML = tabla;
+            }
+        };
+        xmlhttp.open("GET", "json_demo.txt", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!--1.The code must include information about country, company, price and year.-->
+<!DOCTYPE html>
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+    <h2>Estoy a tope Ignacio</h2>
+
+    <button type="button" onclick="loadDoc()">Dale aqui compadre, vas a flipal</button>
+    <br> <br>
+    <table id="demo"></table>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "cd_catalog.xml", true);
+            xhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Price</th><th>Year</th><th>Country</th><th>Company</th></tr>";
+            var x = xmlDoc.getElementsByTagName("CD");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+<!--2.Using a div element, show the same information. Hint: In order to create a table using “div” tags.-->
+
+<!DOCTYPE html>
+<html>
+<style>
+    .divTable {
+        width: 100%;
+        display: block;
+        height: 100%!important;
+        border: 1px solid #F60;
+        padding: 0px;
+        background-color: transparent;
+        margin: 0px;
+        line-Height: 26px;
+    }
+    
+    .divHeaderRow {
+        width: 100%;
+        position: relative;
+    }
+    
+    .divHeaderCell {
+        border: 1px solid #F60;
+        width: 24.5%;
+        position: relative;
+        font-family: 'arial, helvetica, sans-serif';
+        font-size: 13px;
+        font-style: bold;
+        background-color: #CCFF33;
+        float: left;
+    }
+    
+    .divRow {
+        width: 100%;
+        display: table;
+        position: relative;
+        color: #000000;
+    }
+    
+    .divCell {
+        border: 1px solid #F60;
+        width: 24.5%;
+        display: block;
+        position: relative;
+        background-color: #FFFF99;
+        color: #000000;
+        font-size: 12px;
+        float: left;
+        text-align: left;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+    }
+</style>
+
+<body>
+
+    <h2>Estoy a tope Ignacio</h2>
+
+    <button type="button" onclick="loadDoc()">Dale aqui compadre, vas a flipal</button>
+    <br> <br>
+    <div id="demo" class="divTable"></div>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "cd_catalog.xml", true);
+            xhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<div  class='divHeaderRow'><div id='divHeaderCell1' class='divHeaderCell'>Price</div><div id='divHeaderCell2' class='divHeaderCell'>Year</div><div id='divHeaderCell3' class='divHeaderCell'>Country</div><div id='divHeaderCell4' class='divHeaderCell'>Company</div></div>";
+            var x = xmlDoc.getElementsByTagName("CD");
+            for (i = 0; i < x.length; i++) {
+                table += "<div id='divRow1' class='divRow'><div class='divCell'>" +
+                    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+                    "</div><div class='divCell'>" +
+                    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+                    "</div><div class='divCell'>" +
+                    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+                    "</div><div class='divCell'>" +
+                    x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+                    "</div></div>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+
+</body>
+
+</html>
