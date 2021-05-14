@@ -1,0 +1,17 @@
+<!ELEMENT address (contact*)>
+<!ELEMENT contact (name,home,phone,email*,company)>
+<!ELEMENT name (firstname, lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT home (street, num, zip, country)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT company (name1, web*)>
+<!ELEMENT name1 (#PCDATA)>
+<!ELEMENT web (name2, url)>
+<!ELEMENT name2 (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
