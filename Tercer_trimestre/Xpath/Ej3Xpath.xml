@@ -1,0 +1,48 @@
+<!--Exercise 3. Evaluate XPath expressions.
+Edit the file  “Universidad.xml” with XML Copy Editor and perform the following questions with XPath:-->
+
+<!--1. Select all elements “nombre”.-->
+//nombre
+
+<!--2. Select degree names offered by the University.-->
+//carrera/nombre
+
+<!--3. Select all the student’s names.-->
+//alumno/nombre
+
+<!--4. Select all the subject’s names.-->
+//asignatura/nombre
+
+<!--5. Select all id attributes.-->
+//@id
+
+<!--6. Select the id attribute of the degrees.-->
+//carrera/@id
+
+<!--7. Select the first student.-->
+//alumno[1]
+
+<!--8. Select the last student.-->
+//alumno[last()]
+
+<!--9. The two first students.-->
+//alumno[position()< 3]
+
+<!--10. Select the subject with id=a01.-->
+//asignatura[@id="a01"]
+
+<!--11. Select the degrees’ subjects whose id is c01.-->
+//asignatura[@titulacion="c01"]
+
+<!--12. Degrees with over 200 credits.-->
+//carrera[creditos>200]
+
+<!--13. Subjects with over 4 theoric credits.-->
+//asignatura[creditos_teoricos>4]
+
+<!--14. Name and centre of the degrees.-->
+//carrera/nombre|//carrera/centro
+
+<!--15. Select all nodes which are child of “carreras”-->
+//carreras/*
+
