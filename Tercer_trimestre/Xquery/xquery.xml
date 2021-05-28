@@ -1,0 +1,14 @@
+<!--1. Muestra el nombre de los productos del departamento “ACC” ordenados por nombre-->
+for $x in doc("catalog.xq")/catalog/product where $x/@dept="ACC" order by $x/name return data($x/name)
+
+<!--2. Muestra el resultado anterior usando una lista no numerada de html-->
+<ul>{for $x in doc("catalog.xq")/catalog/product where $x/@dept="ACC" order by $x/name return <li>{data($x/name)}</li> }</ul>
+
+<!--3. Muestra los productos del departamento “WMN” entre etiquetas <women> y las del departamento “MEN” entre etiquetas <men>-->
+for $x in doc("catalog.xq")/catalog/product return if ($x/@dept="WMN") then <women>{data($x/name)}</women> else if ($x/@dept="MEN") then <men>{data($x/name)}</men>
+
+<!--4. Muestra los productos del departamento “ACC” entre etiquetas <accnumber> y el resto usando etiquetas <cod>-->
+for $x in doc("catalog.xq")/catalog/product return if ($x/@dept="ACC") then <accnumber>{data($x/number)}</accnumber> else <cod>{data($x/number)}</cod>
+
+<!--5. Muestra los productos del departamento “ACC”-->
+for $x in doc("catalog.xq")/catalog/product where $x/@dept="ACC" return data($x/number|$x/name)
