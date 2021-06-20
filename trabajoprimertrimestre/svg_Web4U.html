@@ -1,0 +1,142 @@
+<html>
+
+<head>
+
+  <title>SVG</title>
+
+  <link rel="stylesheet" href="hoja_de_estilos.css">
+
+</head>
+
+<body>
+
+ <h1 class="cabecera">Web4U</h1>
+
+ <ul>
+  <li><a href="index.html">ÍNDICE</a></li>
+  <li><a href="html_Web4U.html">HTML</a></li>
+  <li><a href="css_Web4U.html">CSS</a></li>
+  <li><a class="active" href="svg_Web4U.html">SVG</a></li>
+ </ul>
+
+ <h1 class="subtitulo">Figuras SVG</h1>
+ 
+ <h2 class="ejemplo">Rect&aacute;ngulo</h2>
+ 
+ <p class="ejemplo">
+ El elemento &lt;rect&gt; se usa para crear rectángulos y variaciones de la figura de un rectángulo.<br>
+ Ejemplo:<br>
+ &lt;html&gt;<br>
+ &lt;body&gt;<br>
+ &lt;svg width="400" height="110"&gt;<br>
+ &lt;rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" /&gt;<br>
+ &lt;/svg&gt;<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;
+ </p>
+ 
+ <div class="imgejemplo"><img src="svgresultado1.png"></div>
+ 
+ <p class="ejemplo">
+ Explicación del código:<br>
+ Los atributos de ancho y alto del elemento &lt;rect&gt; definen el alto y el ancho del rectángulo.<br>
+ El atributo de estilo se utiliza para definir propiedades CSS para el rectángulo.<br>
+ La propiedad CSS de relleno define el color de relleno del rectángulo.<br>
+ La propiedad CSS de ancho de trazo define el ancho del borde del rectángulo.<br>
+ La propiedad CSS de trazo define el color del borde del rectángulo.
+ </p>
+ 
+ <h2 class="ejemplo">Círculo</h2>
+ 
+ <p class="ejemplo">
+ El elemento &lt;circle&gt; se usa para crear círculos.<br>
+ Ejemplo:<br>
+ &lt;html&gt;<br>
+ &lt;body&gt;<br>
+ &lt;svg width="100" height="100"&gt;<br>
+ &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;<br>
+ &lt;/svg&gt;<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;
+ </p>
+ 
+ <div class="imgejemplo"><img src="svgresultado2.png"></div>
+ 
+ <p class="ejemplo">
+ Explicación del código:<br>
+ Los atributos cx y cy definen las coordenadas x e y del centro del círculo. Si se omiten cx y cy, el centro del círculo se establece en (0,0).<br>
+ El atributo r define el radio del círculo.
+ </p>
+ 
+ <h2 class="ejemplo">Elipse</h2>
+ 
+ <p class="ejemplo">
+ El elemento &lt;ellipse&gt; se usa para crear elipses.<br>
+ Ejemplo:<br>
+ &lt;html&gt;<br>
+ &lt;body&gt;<br>
+ &lt;svg width="500" height="140"&gt;<br>
+ &lt;ellipse cx="200" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2" /&gt;<br>
+ &lt;/svg&gt;<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;
+ </p>
+ 
+ <div class="imgejemplo"><img src="svgresultado3.png"></div>
+ 
+ <p class="ejemplo">
+ Explicación del código:<br>
+ El atributo cx define la coordenada x del centro de la elipse.<br>
+ El atributo cy define la coordenada y del centro de la elipse.<br>
+ El atributo rx define el radio horizontal.<br>
+ El atributo ry define el radio vertical.
+ </p>
+ 
+ <h2 class="ejemplo">Línea</h2>
+ 
+ <p class="ejemplo">
+ El elemento &lt;line&gt; se usa para crear líneas.<br>
+ Ejemplo:<br>
+ &lt;html&gt;<br>
+ &lt;body&gt;<br>
+ &lt;svg width="500" height="210"&gt;<br>
+ &lt;line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" /&gt;<br>
+ &lt;/svg&gt;<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;
+ </p>
+ 
+ <div class="imgejemplo"><img src="svgresultado4.png"></div>
+ 
+ <p class="ejemplo">
+ Explicación del código:<br>
+ El atributo x1 define el inicio de la línea en el eje x.<br>
+ El atributo y1 define el inicio de la línea en el eje y.<br>
+ El atributo x2 define el final de la línea en el eje x.<br>
+ El atributo y2 define el final de la línea en el eje y.
+ </p>
+ 
+ <h2 class="ejemplo">Polígono</h2>
+ 
+ <p class="ejemplo">
+ El elemento &lt;polygon&gt; se usa para crear gráficos que contienen al menos tres lados.<br>
+ Ejemplo:<br>
+ &lt;html&gt;<br>
+ &lt;body&gt;<br>
+ &lt;svg width="500" height="210"&gt;<br>
+ &lt;polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" /&gt;<br>
+ &lt;/svg&gt;<br>
+ &lt;/body&gt;<br>
+ &lt;/html&gt;
+ </p>
+ 
+ <div class="imgejemplo"><img src="svgresultado5.png"></div>
+ 
+ <p class="ejemplo">
+ Explicación del código:<br>
+ El atributo "points" define las coordenadas x e y para cada vértice del polígono.
+ </p>
+ 
+</body>
+
+</html>

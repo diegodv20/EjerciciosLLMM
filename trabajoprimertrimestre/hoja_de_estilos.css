@@ -1,0 +1,72 @@
+body {
+	font-family: verdana;
+	margin: 0;
+	background-image: url('fondo_pagina.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.active {
+  background-color: red;
+}
+
+.cabecera {
+	background-color: yellow;
+	color: black;
+	font-size: 50px;
+	text-align: center;
+	border: 5px solid blue;
+	margin: 10px;
+	padding: 20px;
+}
+
+.subtitulo {
+	background-color: red;
+	font-size: 30px;
+	margin: 10px;
+	color: white;
+}
+
+.imgejemplo {
+	margin: 10px;
+}
+
+h2.ejemplo {
+	color: magenta;
+	margin: 20px;
+}
+
+p.ejemplo {
+	color: blue;
+	margin: 10px;
+}
+
+a.fotomenu {
+	margin: 30 px;
+}
